@@ -26,8 +26,12 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Europe/Stockholm
-    env_file:
-      - ./transmission.env
+      - TRANSMISSION_WEB_HOME= #optional
+      - USER= #optional
+      - PASS= #optional
+      - WHITELIST= #optional
+      - PEERPORT= #54914
+      - HOST_WHITELIST= #optional
     volumes:
       - ./transmission-config:/config
       - ./downloads:/downloads
